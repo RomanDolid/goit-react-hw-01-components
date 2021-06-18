@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-// import getRandomColor from './colorPicker';
+import getRandomColor from './colorPicker';
 import s from '../styles/Statistics.module.css';
 
 const Statistics = ({ stats, title }) => {
@@ -12,7 +12,7 @@ const Statistics = ({ stats, title }) => {
                     <li
                         className={s.item}
                         key={id}
-                        style={{ backgroundColor: 'tomato' }}
+                        style={{ backgroundColor: getRandomColor() }}
                     >
                         <span className={s.label}>{label}</span>
                         <span className={s.percentage}>{percentage}%</span>
